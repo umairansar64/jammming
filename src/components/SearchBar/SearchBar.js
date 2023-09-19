@@ -1,10 +1,11 @@
 import React from 'react';
-import './SearchBar.module.css';
+import styles from './SearchBar.module.css';
 
 function SearchBar() {
   return (
-    <div className="SearchBar">
-      {/* Input field and search button will go here */}
+    <div className={styles.SearchBar}>
+      <input placeholder="Enter Song, Album, or Artist" />
+      <button className={styles.SearchButton}>Search</button>
     </div>
   );
 }

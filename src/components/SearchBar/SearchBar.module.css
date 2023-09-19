@@ -1,0 +1,8 @@
+.SearchButton {
+    /* Add your desired styling for the button here */
+    background-color: #1DB954; /* Spotify green for example */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}

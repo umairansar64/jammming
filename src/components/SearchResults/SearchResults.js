@@ -1,10 +1,11 @@
 import React from 'react';
 import './SearchResults.module.css';
+import Tracklist from '../Tracklist/Tracklist';
 
-function SearchResults() {
+function SearchResults({ trackData, onAdd }) {
   return (
     <div className="SearchResults">
-      {/* Input field and search button will go here */}
+      <Tracklist tracks={trackData} onAdd={onAdd} isRemovable={false} />
     </div>
   );
 }
