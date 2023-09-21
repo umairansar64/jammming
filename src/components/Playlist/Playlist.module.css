@@ -1,31 +1,22 @@
 
-    .Playlist {
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        padding: 20px;
-        margin: 20px auto;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: #ffffff;
-        border-radius: 8px;
-    }
+.Playlist {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #E3F4F3;
+    border-radius: 8px;
+    border: 3px solid #97B4B2;
+}
 
-    .SaveToSpotifyButton {
-        padding: 10px 20px;
-        background-color: #1db954;  /* Spotify green */
-        color: #ffffff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .SaveToSpotifyButton:hover {
-        background-color: #1ed760;  /* Slightly lighter Spotify green for hover effect */
-    }
-    .SaveToSpotifyButton {
-    /* Add your desired styling for the button here */
-    background-color: #1DB954; /* Spotify green for example */
+.SaveToSpotifyButton:hover {
+    background-color: #566765;
+}
+.SaveToSpotifyButton {
+    margin-top: 15px;
+    background-color: #819A98;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -33,15 +24,15 @@
 }
 
 .Playlist-name {
-    font-size: 2em; /* or whatever size your h2 was before */
+    font-size: 2em;
     background: none;
     border: none;
-    outline: none; /* be careful with this for accessibility */
+    outline: none;
     cursor: pointer;
-    width: 100%; /* to take full width of the container */
+    width: 100%;
 }
 
 .Playlist-name:hover, .Playlist-name:focus {
-    background: #f0f0f0; /* subtle background to indicate edit mode */
+    background: #f0f0f0;
     cursor: text;
 }

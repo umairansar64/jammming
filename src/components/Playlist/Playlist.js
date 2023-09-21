@@ -5,6 +5,7 @@ import Tracklist from '../Tracklist/Tracklist';
 function Playlist({ name, tracks, onRemove, onNameChange, onSave }) {
   return (
     <div className={styles.Playlist}>
+      <p>Rename Your Playlist here:</p>
       <input 
         type="text" 
         className="Playlist-name" 

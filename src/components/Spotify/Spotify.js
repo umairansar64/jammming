@@ -1,5 +1,5 @@
-const clientId = 'abbde673064448dfb7f338fb683c77e4'; // You get this from the Spotify developer dashboard
-const redirectUri = 'http://localhost:3000'; // This should be the URL of your app
+const clientId = 'abbde673064448dfb7f338fb683c77e4';
+const redirectUri = 'http://localhost:3000';
 
 let accessToken;
 

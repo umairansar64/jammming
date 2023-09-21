@@ -18,17 +18,17 @@ function App() {
     setPlaylistTracks(prevTracks => prevTracks.filter(track => track.id !== trackToRemove.id));
   };
 
-  const [playlistName, setPlaylistName] = useState("My Awesome Playlist");
+  const [playlistName, setPlaylistName] = useState("My Personal Playlist");
 
   const [playlistTracks, setPlaylistTracks] = useState([
-    { id: 3, name: "Song 3", artist: "Artist 3", album: "Album 3" },
-    { id: 4, name: "Song 4", artist: "Artist 4", album: "Album 4" },
+    { id: 3, name: "Asan Nahi Yahan", artist: "Arijit Singh", album: "Aashiqui 2" },
+    { id: 4, name: "Hai Dil Yeh Mera", artist: "Arijit Singh", album: "Heartless" },
     // ... add more tracks as needed ...
   ]);
 
   const [tracks, setTracks] = useState([
-    { id: 1, name: "Song 1", artist: "Artist 1", album: "Album 1" },
-    { id: 2, name: "Song 2", artist: "Artist 2", album: "Album 2" },
+    { id: 1, name:"Chahun main ya na", artist: "Arijit Singh", album: "Aashiqui 2" },
+    { id: 2, name: "Sunn Raha Hai Na Tu", artist: "Ankit Tiwari", album: "Aashiqui 2" },
     // ... add more tracks as needed ...
   ]);
 
@@ -50,7 +50,7 @@ function App() {
     }
 
     Spotify.getUserId()
-        .then(userId => {
+      .then(userId => {
           return Spotify.createPlaylist(userId, playlistName)
               .then(playlistId => {
                   return { userId, playlistId };
@@ -59,16 +59,16 @@ function App() {
       .then(({ userId, playlistId }) => {
           return Spotify.addTracksToPlaylist(userId, playlistId, trackUris);
       })
-        .then(snapshotId => {
-            console.log('Playlist saved with snapshot ID: ', snapshotId);
-            
-            // Reset playlist name and tracks (you can modify this behavior if needed)
-            setPlaylistName('New Playlist');
-            setPlaylistTracks([]);
-        })
-        .catch(error => {
-            console.error('Error saving playlist:', error);
-        });
+      .then(snapshotId => {
+          console.log('Playlist saved with snapshot ID: ', snapshotId);
+          
+          // Reset playlist name and tracks (can be modified if needed)
+          setPlaylistName('New Playlist');
+          setPlaylistTracks([]);
+      })
+      .catch(error => {
+          console.error('Error saving playlist:', error);
+      });
   }
 
   const updateSearchResults = (results) => {
@@ -77,17 +77,20 @@ function App() {
 
   return (
     <div className="App">
-      <SearchBar onSearch={updateSearchResults} />
-      <SearchResults trackData={tracks} onAdd={addTrack} />
+      <h1 className={styles.MainHeading}>Jammming</h1>
+      <div className={styles.SearchStyles}>
+        <SearchBar onSearch={updateSearchResults} />
+        <SearchResults 
+        trackData={tracks} 
+        onAdd={addTrack} />
+      </div>
       <Playlist 
-      name={playlistName} 
-      tracks={playlistTracks} 
-      onRemove={removeTrack} 
-      onNameChange={handlePlaylistNameChange}
-      onSave={savePlaylist}
+        name={playlistName} 
+        tracks={playlistTracks} 
+        onRemove={removeTrack} 
+        onNameChange={handlePlaylistNameChange}
+        onSave={savePlaylist}
       />
-      {/*<button onClick={savePlaylist}>Save to Spotify</button>
-       And other components as needed */}
     </div>
   );
 }

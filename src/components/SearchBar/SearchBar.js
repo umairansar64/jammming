@@ -11,7 +11,7 @@ function SearchBar(props) {
 
   const search = () => {
       Spotify.search(term).then(searchResults => {
-          props.onSearch(searchResults); // Assuming you pass a prop named onSearch to update the state of a parent component
+          props.onSearch(searchResults);
       });
   };
 
