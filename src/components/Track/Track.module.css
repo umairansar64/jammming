@@ -1,3 +1,58 @@
-.Track-action {
+
+    .Track {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .Track-name {
+        flex: 1;
+    }
+
+    .Track-artist {
+        flex: 1;
+    }
+
+    .Track-album {
+        flex: 1;
+    }
+
+    .Track-action {
+        flex: 1;
+    }
+    .Track-action {
     cursor: pointer;
   }
+    .Track {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+        background-color: #f9f9f9;
+        transition: background-color 0.3s;
+    }
+
+    .Track:hover {
+        background-color: #f0f0f0;
+    }
+
+    .Track-name, .Track-artist, .Track-album, .Track-action {
+        margin: 0;
+        padding: 0;
+    }
+
+    .Track-action button {
+        padding: 8px 12px;
+        background-color: #1db954;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #ffffff;
+        transition: background-color 0.3s;
+    }
+
+    .Track-action button:hover {
+        background-color: #1ed760;
+    }
+    
