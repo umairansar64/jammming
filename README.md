@@ -25,6 +25,41 @@ Jammming is a sophisticated React web application that interacts with the Spotif
 - [HTML](https://www.w3.org/html/): For structuring the web application.
 
 ## How to Install & Run
+
 1. Clone the repository to your local machine.
    ```shell
    git clone <repository-url>
+
+2. Navigate to the project directory.
+   ```shell
+   cd <project-directory>
+3. Install the project dependencies.
+   ```shell
+   npm install
+4. Start the development server.
+   ```shell
+   npm start
+5. Open your web browser and go to http://localhost:3000.
+
+## Usage
+
+- Log in using your Spotify account credentials.
+- Search for songs using the search bar.
+- View search results and select songs to add to your custom playlist.
+- Remove any song from your custom playlist if needed.
+- Rename your custom playlist.
+- Save the playlist to your Spotify account.
+
+## Limitations
+
+- The Spotify access token has a validity of 1 hour, necessitating re-login upon expiration.
+
+## Future Work
+
+- Extend user sessions by implementing refresh token logic.
+- Enhance UI/UX for more intuitive navigation and interaction.
+- Incorporate additional features like viewing and editing existing playlists.
+
+## Contributors
+
+- [Mohammad Umair Ansar](https://github.com/umairansar64)
