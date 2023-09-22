@@ -80,7 +80,7 @@ function App() {
       <h1 className={styles.MainHeading}>Jammming</h1>
       <div className={styles.SearchStyles}>
         <SearchBar onSearch={updateSearchResults} />
-        <SearchResults 
+        <SearchResults
         trackData={tracks} 
         onAdd={addTrack} />
       </div>
