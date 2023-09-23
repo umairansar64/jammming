@@ -36,11 +36,11 @@ function App() {
     setPlaylistName(event.target.value);
   };
 
-  const mockUris = [
-    'spotify:track:1dfeR4HaWDbWqFHLkxsg1d',
-    'spotify:track:2YarjDYjBJuH63dUIh9OWv',
-    // add more URIs as needed for testing...
-  ];
+  // const mockUris = [
+  //   'spotify:track:1dfeR4HaWDbWqFHLkxsg1d',
+  //   'spotify:track:2YarjDYjBJuH63dUIh9OWv',
+  //   // add more URIs as needed for testing...
+  // ];
 
   const savePlaylist = () => {
     const trackUris = playlistTracks.map(track => track.uri);
